@@ -8,7 +8,7 @@
 	<head>
 		<title>Narciso Salvador</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -41,11 +41,11 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>Hi, i'm Narciso Salvador</h2>
+							<h2>Hi, I'm Narciso Salvador</h2>
 							<p>I am a<br /> 
 						Front-End Software Engineer<br />
-														Building AI-powered tools at IBM<br />
-														Former Michelin-Starred Chef
+														Building UI for LLM &amp; agentic AI products<br />
+														Former Culinary Director of a Michelin-starred restaurant
 							</p>
 							
 						</div>
@@ -56,26 +56,46 @@
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Looking for a software engineer or a web developer?<br />
-								I can help!</h2>
-															<p>I'm a front-end engineer at IBM, where I build production interfaces for watsonx Orchestrate, IBM's AI agent platform. My background as a former Michelin-starred chef taught me how to operate under pressure and sweat the details, skills I bring to building clean, reliable software. Outside of IBM, I build side projects like CastLine, a surf fishing conditions app that combines my two passions: code and the outdoors.</p>
+								<h2>Looking for a software engineer?<br />
+								Let's talk!</h2>
+															<p>I'm a front-end engineer who spent 3.5 years at IBM building production UI for AI products, most recently watsonx Orchestrate, IBM's AI agent platform. Before tech, I was Culinary Director of a Michelin-starred restaurant, where I learned to work under pressure and sweat the details, skills I bring to building clean, reliable software. Outside of work, I build side projects like CastLine, a surf fishing conditions app that combines my two passions: code and the outdoors. I'm currently open to frontend, full-stack, and AI product engineering roles.</p>
+								<ul class="actions special">
+									<li><a href="Narciso_Salvador_Resume.pdf" class="button primary">Download my resume</a></li>
+									<li><a href="https://www.linkedin.com/in/narciso-salvador/" class="button">LinkedIn</a></li>
+								</ul>
 							</header>
 						</div>
 					</section>
 
+
+					<section id="ibm" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>At IBM</h2>
+								<p>Software Developer, May 2023 – Oct 2026. Frontend developer for watsonx Orchestrate's document processing team, plus Watson NLU and Watson Discovery.</p>
+							</header>
+							<ul class="alt" style="text-align:left">
+								<li><strong>LLM model selector:</strong> designed and built an API-driven model picker supporting 20+ LLMs across 3 components, with deprecation, pricing, and legal-notice warnings. Shipped to all watsonx Orchestrate users.</li>
+								<li><strong>Onboarding redesign:</strong> replaced a crowded first page with one guided action per step, cutting new-user drop-off from 40% to 5%.</li>
+								<li><strong>Document lifecycle state machine:</strong> made status transitions a single source of truth and blocked impossible states. No state-related bugs reported since launch.</li>
+								<li><strong>Performance:</strong> consolidated per-item tooltips to remove slowdowns on long extraction-field lists, and tuned TanStack Query caching to cut refetches and re-renders.</li>
+								<li><strong>Beyond the UI:</strong> Release Manager, Iteration Manager for Watson NLU, Security Focal for Discovery tooling, on-call (12+ incidents), and helped migrate CI/CD for 12 repositories.</li>
+							</ul>
+						</div>
+					</section>
 
 					<section id="three" class="wrapper style3 special">
 
 							<header class="major">
 								<h2>Check below for some of my projects</h2>
 							</header>
-							<img src="/images/arrow.svg" alt="">
+							<img src="/images/arrow.svg" alt="" aria-hidden="true">
 					</section>
 
 				<!-- Two -->
 					<section id="two" class="wrapper alt style2">
 															<section class="spotlight">
-						<div class="image"><img src="images/castline.png" alt="" /></div><div class="content">
+						<div class="image"><img src="images/castline.png" alt="CastLine surf fishing conditions app screenshot" /></div><div class="content">
 						<h3>CastLine<br />
 						Surf fishing conditions app</h3>
 						<p>Built a surf fishing conditions app to help anglers plan trips around real-time tide, wave, and wind data at their favorite beaches.</br></br>
@@ -90,18 +110,19 @@ Tech: React, TypeScript, Vite, Tailwind CSS, shadcn/ui, TanStack Query, Node.js,
 					</div>
 				</section>
 		<section class="spotlight">
-													<div class="image"><img src="images/Fishon.gif" alt="" /></div><div class="content">
+													<div class="image"><img src="images/Fishon.gif" alt="Fish on! app demo" /></div><div class="content">
 							
-								<h3>Fish on!<br />Social Media-eqsue appliction built for anglers!</h3>
-								<p>Created a fullstack crud web application where anglers connect and share their catches and fishing adventures with other fishing
+								<h3>Fish on!<br />A social media app built for anglers</h3>
+								<p>Created a full-stack CRUD web application where anglers connect and share their catches and fishing adventures with other fishing
 									enthusiasts!</br></br>
-								Tech: ReactJS, Node.js, Express, Mongoose, React-Router, Redux, Mauris
+								Tech: React, Node.js, Express, Mongoose, React Router, Redux
 								</p>
 								<ul class="actions small">
 									<li><a href="https://github.com/narcisods/fish-on" class="button primary small">Check out the code</a></li>
 								</ul>
 							</div>
 						</section>
+						<!-- Older projects, hidden for now:
 						<section class="spotlight">
 							<div class="image"><img src="images/blackbookproject.gif" alt="" /></div><div class="content">
 								<h3>Chef's Black Book<br />
@@ -121,9 +142,9 @@ Tech: React, TypeScript, Vite, Tailwind CSS, shadcn/ui, TanStack Query, Node.js,
 								<p>Deployed and hosted a highly-available WordPress application using EC2, RDS, Route 53, ASG and VPC.</br></br>
 								Tech: AWS Services, Wordpress
 								</p>
-								<!-- <ul class="actions small">
+								 <ul class="actions small">
 									<li><a href="https://www.devnarciso.com" class="button primary small">Check it out</a></li>
-								</ul> -->
+								</ul> 
 							</div>
 						</section>
 						<section class="spotlight">
@@ -136,6 +157,7 @@ Tech: React, TypeScript, Vite, Tailwind CSS, shadcn/ui, TanStack Query, Node.js,
 								</ul>
 							</div>
 						</section>
+						-->
 						<!-- <section class="spotlight">
 							<div class="image"><img src="images/mvclecture.png" alt="" /></div><div class="content">
 								<h2>What is MVC?<br />
@@ -201,8 +223,8 @@ Tech: React, TypeScript, Vite, Tailwind CSS, shadcn/ui, TanStack Query, Node.js,
 						<div class="inner">
 							<header>
 								<h2>Reach Out</h2>
-								<p>Please feel free to send me an email if you have any questions, would like to inquire about my services or would just like to say hi!</p></br>
-								Narcisodsalvador@gmail.com
+								<p>I'm open to new roles. Feel free to email me about opportunities, questions, or just to say hi!</p>
+								<p><a href="mailto:narcisodsalvador@gmail.com">narcisodsalvador@gmail.com</a></p>
 							</header>
 						</div>
 					</section>
@@ -210,15 +232,14 @@ Tech: React, TypeScript, Vite, Tailwind CSS, shadcn/ui, TanStack Query, Node.js,
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
-							<li><a href="https://twitter.com/nar__ciso" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.facebook.com/thenar" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.instagram.com/nar__ciso/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.linkedin.com/in/narciso-salvador/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							<li><a href="https://github.com/narcisods" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 							<li><a href="mailto:narcisodsalvador@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="Narciso_Salvador_Resume.pdf" class="icon solid fa-file-alt"><span class="label">Resume</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>Narcisodsalvador@gmail.com</li>
-							<li>&copy; All Rights Reserved</li>
+							<li>narcisodsalvador@gmail.com</li>
+							<li>&copy; 2026 Narciso Salvador</li>
 						</ul>
 					</footer>
 
