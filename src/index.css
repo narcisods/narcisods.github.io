@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Smooth scrolling for in-page links, but only for people who haven't asked the OS to reduce motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Keep anchor targets from hiding under the sticky header. */
+section[id] {
+  scroll-margin-top: 5rem;
+}
