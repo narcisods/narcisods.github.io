@@ -93,7 +93,7 @@ That one line is all Tailwind v4 needs. There's no `tailwind.config.js` anymore,
 - **Smooth scrolling** for the nav links, wrapped in `prefers-reduced-motion: no-preference`, so people who turn off animations in their OS don't get it.
 - **`scroll-margin-top`** on sections, so jumping to a section doesn't hide its heading under the sticky header.
 
-**Dark mode:** classes like `dark:bg-slate-950` follow the visitor's OS setting (`prefers-color-scheme`) by default. There's no toggle, and the site just matches the system.
+**Dark mode:** classes like `dark:bg-neutral-950` switch on when `<html>` has a `dark` class. See step 7b for how the theme toggle sets it.
 
 ## 6. Content in one file (`src/data.ts`)
 
@@ -115,6 +115,37 @@ All text, links, IBM highlights, and project details live in `data.ts`. Componen
 | `Footer.tsx` | Copyright with an auto-updating year |
 | `App.tsx` | Puts it all together, plus the "Skip to content" link |
 | `main.tsx` | Mounts `<App />` into `#root` inside `<StrictMode>`, which flags common React mistakes during development |
+
+## 7b. Light/dark theme toggle
+
+A sun/moon button in the header switches themes. The first visit follows the OS setting, and after that the visitor's choice is remembered.
+
+**How it works, in three pieces:**
+
+1. **`src/index.css`**: `@custom-variant dark (&:where(.dark, .dark *));` tells Tailwind v4 that `dark:` utilities apply when an ancestor has the `dark` class. Out of the box, Tailwind ties `dark:` directly to the OS setting, which a button can't override. `color-scheme` is also set, so native parts like scrollbars match the theme.
+
+2. **An inline script in `index.html`**: before the page draws anything, it checks `localStorage` for a saved choice. If there isn't one, it checks the OS setting, then adds or removes `dark` on `<html>`. It runs inline in `<head>`, not inside React, because React loads a moment later. If React decided the theme, dark-mode visitors would see a white flash first, often called FOUC (flash of unstyled content).
+
+3. **`src/components/ThemeToggle.tsx`**:
+   - Starts its state from the class the script already set, so React and the page agree.
+   - A `useEffect` applies the class whenever the theme changes.
+   - Clicking saves the choice to `localStorage`.
+   - A second `useEffect` listens for OS theme changes, like automatic dark mode at sunset. It only follows them if the visitor never picked a theme.
+   - Every `localStorage` call is wrapped in `try/catch`, because storage can be blocked in private browsing. The toggle still works, it just won't be remembered.
+
+**Accessibility:**
+- It's a real `<button>`, so it works with Tab, Enter, and Space for free.
+- `aria-label` says what will happen ("Switch to dark mode"). An icon on its own means nothing to a screen reader.
+- The SVG icons are `aria-hidden`, so they aren't announced twice.
+- It uses the same visible focus ring as every other control.
+
+**Checked in a headless browser:**
+- Dark OS on first load gives the dark theme.
+- Clicking switches to light and saves it.
+- After a reload it stays light.
+- Tab and Enter toggle it back.
+- A fresh visitor on a light OS gets light.
+- No console errors.
 
 **Layout approach:** mobile-first. Base classes are for phones, and `sm:` and `md:` prefixes add the desktop layout. Content is capped at `max-w-5xl` so lines stay readable on wide screens.
 

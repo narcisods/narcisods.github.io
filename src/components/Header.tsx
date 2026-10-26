@@ -1,5 +1,6 @@
 import { profile } from '../data'
 import { focusRing } from './ui'
+import ThemeToggle from './ThemeToggle'
 
 const links = [
   { href: '#about', label: 'About' },
@@ -28,12 +29,15 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <a
-          href={profile.resume}
-          className={`rounded-lg bg-teal-700 px-3 py-1.5 text-sm font-semibold text-white hover:bg-teal-800 dark:bg-teal-300 dark:text-neutral-950 dark:hover:bg-teal-200 ${focusRing}`}
-        >
-          Resume
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href={profile.resume}
+            className={`rounded-lg bg-teal-700 px-3 py-1.5 text-sm font-semibold text-white hover:bg-teal-800 dark:bg-teal-300 dark:text-neutral-950 dark:hover:bg-teal-200 ${focusRing}`}
+          >
+            Resume
+          </a>
+        </div>
       </nav>
     </header>
   )

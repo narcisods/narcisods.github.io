@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* dark: utilities follow a `dark` class on <html> instead of the OS setting directly,
+   so the theme toggle can override it. index.html sets the class before first paint. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
 /* Smooth scrolling for in-page links, but only for people who haven't asked the OS to reduce motion. */
 @media (prefers-reduced-motion: no-preference) {
   html {
