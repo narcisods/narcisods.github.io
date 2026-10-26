@@ -11,7 +11,7 @@ export const profile = {
 }
 
 export const about = [
-  "I'm a frontend engineer who spent 3.5 years at IBM building production UI for AI products, most recently watsonx Orchestrate, IBM's AI agent and automation platform.",
+  "I'm a frontend engineer at IBM, where I've spent 3.5 years building production UI for AI products, most recently watsonx Orchestrate, IBM's AI agent and automation platform.",
   'Before tech, I was Culinary Director of a Michelin-starred restaurant, where I learned to work under pressure and sweat the details. I bring the same care to software: clean, reliable, accessible interfaces.',
   "Outside of work I build side projects like CastLine, a surf fishing conditions app that combines my two passions: code and the outdoors. I'm open to frontend, full-stack, and AI product engineering roles in the Bay Area or remote.",
 ]
@@ -20,7 +20,7 @@ export type Highlight = { label: string; detail: string }
 
 export const ibm = {
   role: 'Software Developer, IBM',
-  dates: 'May 2023 – Oct 2026',
+  dates: 'May 2023 – Present',
   summary:
     "Frontend developer for watsonx Orchestrate's document processing team, plus Watson NLU and Watson Discovery.",
   highlights: [
