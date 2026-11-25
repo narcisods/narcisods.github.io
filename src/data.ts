@@ -11,7 +11,7 @@ export const profile = {
 }
 
 export const about = [
-  "I'm a frontend engineer at IBM, where I've spent 3.5 years building production UI for AI products, most recently watsonx Orchestrate, IBM's AI agent and automation platform.",
+  "I'm a frontend engineer who spent 3.5 years at IBM building production UI for AI products, most recently watsonx Orchestrate, IBM's AI agent and automation platform.",
   'Before tech, I was Culinary Director of a Michelin-starred restaurant, where I learned to work under pressure and sweat the details. I bring the same care to software: clean, reliable, accessible interfaces.',
   "Outside of work I build side projects like CastLine, a surf fishing conditions app that combines my two passions: code and the outdoors. I'm open to frontend, full-stack, and AI product engineering roles in the Bay Area or remote.",
 ]
@@ -20,7 +20,7 @@ export type Highlight = { label: string; detail: string }
 
 export const ibm = {
   role: 'Software Developer, IBM',
-  dates: 'May 2023 – Present',
+  dates: 'May 2023 – Oct 2026',
   summary:
     "Frontend developer for watsonx Orchestrate's document processing team, plus Watson NLU and Watson Discovery.",
   highlights: [
@@ -32,7 +32,7 @@ export const ibm = {
     {
       label: 'Onboarding redesign',
       detail:
-        'Replaced a crowded first page with one guided action per step, cutting new-user drop-off from 40% to 5%.',
+        'Replaced a crowded first page with one guided action per step, cutting new-user drop-off from 25% to 5%.',
     },
     {
       label: 'Document lifecycle state machine',
@@ -40,9 +40,9 @@ export const ibm = {
         'Made status transitions a single source of truth and blocked impossible states. No state-related bugs reported since launch.',
     },
     {
-      label: 'Performance',
+      label: 'Orchestrate migration',
       detail:
-        'Consolidated per-item tooltips to remove slowdowns on long extraction-field lists, and tuned TanStack Query caching to cut refetches and re-renders.',
+        'Ported the document processing UI from an internal IBM platform to the new chat-based watsonx Orchestrate in about 2 months, coordinating with 3 UI teams plus design and product.',
     },
     {
       label: 'Beyond the UI',
